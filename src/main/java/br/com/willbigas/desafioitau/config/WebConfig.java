@@ -1,2 +1,14 @@
-package br.com.willbigas.desafioitau.config;public class WebConfig {
+package br.com.willbigas.desafioitau.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
+
+@Configuration
+public class WebConfig {
+
+	@Bean
+	public LocalValidatorFactoryBean validator() {
+		return new LocalValidatorFactoryBean();
+	}
 }

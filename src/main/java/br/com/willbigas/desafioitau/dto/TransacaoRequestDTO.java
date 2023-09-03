@@ -1,9 +1,6 @@
-package br.com.willbigas.desafioitau.controller.entity.dto;
+package br.com.willbigas.desafioitau.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
@@ -12,9 +9,14 @@ import java.time.OffsetDateTime;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
+@ToString
 public class TransacaoRequestDTO {
 
+	private Integer id;
+
 	private BigDecimal valor;
+
 	private OffsetDateTime dataHora;
 
 }
